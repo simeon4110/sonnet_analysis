@@ -16,9 +16,11 @@ def remove_punctuation(value):
 
 
 def main():
-    sonnets = Connector().get_author_last_name("shakespeare")
+    sonnets = Connector().get_all()
     stop_words = set(stopwords.words('english'))
     word_list = []
+
+    print(stop_words)
 
     for x in range(0, len(sonnets)):
         for y in range(0, len(sonnets[x]['text'])):

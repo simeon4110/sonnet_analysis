@@ -16,3 +16,9 @@ class Connector:
         response = urlopen(self.base_url + "by_author_last_name/" + last_name) \
             .read().decode('UTF-8')
         return json.loads(response)
+
+    def get_author_first_name(self, first_name):
+        response = urlopen(
+            self.base_url + "by_author_first_name/" + first_name).read().decode(
+            'UTF-8')
+        return json.loads(response)
